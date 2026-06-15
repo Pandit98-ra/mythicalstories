@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythical Stories | Where Legends Live</title>
+    <style>
+        /* Base Styles & Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            background-color: #0b0c10;
+            color: #c5c6c7;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #66fcf1;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        a:hover {
+            color: #45f3ff;
+        }
+
+        /* Header & Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: #1f2833;
+            border-bottom: 2px solid #45f3ff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #66fcf1;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(rgba(11, 12, 16, 0.8), rgba(11, 12, 16, 0.95)), 
+                        url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            border-bottom: 1px solid #1f2833;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 0px 0px 10px rgba(102, 252, 241, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            color: #a9a9a9;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: transparent;
+            color: #66fcf1;
+            border: 2px solid #66fcf1;
+            padding: 10px 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #66fcf1;
+            color: #0b0c10;
+            box-shadow: 0 0 15px rgba(102, 252, 241, 0.4);
+        }
+
+        /* Featured Stories Section */
+        .sections {
+            padding: 60px 10%;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #fff;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background-color: #66fcf1;
+            margin: 10px auto 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #1f2833;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #2e3944;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #66fcf1;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            font-size: 0.95rem;
+            color: #c5c6c7;
+            margin-bottom: 15px;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: #11141a;
+            text-align: center;
+        }
+
+        .about-section p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            text-align: center;
+            background: #1f2833;
+            border-top: 1px solid #2e3944;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 10px 15px;
+            width: 250px;
+            border: 1px solid #c5c6c7;
+            background: #0b0c10;
+            color: #fff;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .newsletter input[type="email"]:focus {
+            outline: none;
+            border-color: #66fcf1;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0b0c10;
+            font-size: 0.85rem;
+            border-top: 1px solid #1f2833;
+            color: #666;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px;
+            }
+            nav ul {
+                margin-top: 15px;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">@mythicalstories</div>
+        <nav>
+            <ul>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#subscribe">Subscribe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Where Lore Meets Reality</h1>
+        <p>Step into the shadows of forgotten histories, ancient deities, and the modern folklore shaping our collective consciousness.</p>
+        <a href="#stories" class="btn">Explore the Archives</a>
+    </section>
+
+    <section id="stories" class="sections">
+        <h2>Latest Chronicles</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-content">
+                    <h3>The Echoes of Atlantis</h3>
+                    <p>A deep dive into the architectural whispers and geographic anomalies that point toward a civilization lost to the waves.</p>
+                    <a href="#">Read Story &rarr;</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Guardians of the Veil</h3>
+                    <p>Exploring the folklore of the border-watchers—entities tasked with keeping the balance between our world and the unseen.</p>
+                    <a href="#">Read Story &rarr;</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Thread of the Fates</h3>
+                    <p>An examination of how continuous identity and choice select the trajectories of the legends we leave behind.</p>
+                    <a href="#">Read Story &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="sections about-section">
+        <h2>About the Project</h2>
+        <p>
+            @mythicalstories is a curated repository dedicated to chronicling the myths, legends, and speculative realities that define human culture. We believe that myth isn't just fiction—it's a mirror to the paths we choose and the worlds we experience.
+        </p>
+    </section>
+
+    <section id="subscribe" class="sections newsletter">
+        <h2>Join the Inner Circle</h2>
+        <p style="margin-bottom: 20px;">Receive a fresh, curated myth or historical mystery straight to your inbox every full moon.</p>
+        <form onsubmit="event.preventDefault(); alert('Welcome to the inner circle.');">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit" class="btn">Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 @mythicalstories. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
